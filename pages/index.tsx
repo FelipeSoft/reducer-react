@@ -29,6 +29,11 @@ const Index = () => {
     }
 
     const editUser = (user: User) => {
+        setUserStateForm({
+            email: user.email,
+            id: user.id,
+            name: user.name
+        })
         dispatch({
             payload: {
                 id: Number(userStateForm.id),
